@@ -1,4 +1,4 @@
-﻿@model CreateFeatureSliderDto
+﻿@model UpdateFeatureSliderDto
 
 @{
     ViewData["Title"] = "CreateCategory";
@@ -9,10 +9,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="chart-box">
-                <h4>Öne Çıkan Slider Ekle</h4>
+                <h4>Öne Çıkan Slider Güncelle</h4>
                 <br />
                 <div class="bs-example" data-example-id="simple-table">
                     <form method="post">
+                        <input type="hidden" asp-for="FeatureSliderId" />
                         <label>Görsel Başlığı</label>
                         <input type="text" class="form-control" asp-for="Title" />
                         <br />
@@ -22,7 +23,7 @@
                         <label>Görsel Linki</label>
                         <input type="text" class="form-control" asp-for="ImageUrl" />
                         <br />
-                        <button class="btn btn-primary">Öne Çıkan Slider Görseli Ekle</button>
+                        <button class="btn btn-primary">Öne Çıkan Slider Görseli Güncelle</button>
                     </form>
                 </div>
             </div>
