@@ -1,4 +1,4 @@
-﻿@model CreateFeatureSliderDto
+﻿@model CreateCategoryDto
 
 @{
     ViewData["Title"] = "CreateCategory";
@@ -9,20 +9,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="chart-box">
-                <h4>Öne Çıkan Slider Ekle</h4>
+                <h4>Kategori Oluştur</h4>
                 <br />
                 <div class="bs-example" data-example-id="simple-table">
-                    <form method="post">
-                        <label>Görsel Başlığı</label>
-                        <input type="text" class="form-control" asp-for="Title" />
+                    <form method="post">                                          <label>Kategori Adı</label>
+                        <input type="text" class="form-control" asp-for="CategoryName" />
                         <br />
-                        <label>Görsel Açıklaması</label>
-                        <input type="text" class="form-control" asp-for="Description" />
-                        <br />
-                        <label>Görsel Linki</label>
-                        <input type="text" class="form-control" asp-for="ImageUrl" />
-                        <br />
-                        <button class="btn btn-primary">Öne Çıkan Slider Görseli Ekle</button>
+                        <button class="btn btn-primary">Kategori Oluştur</button>
                     </form>
                 </div>
             </div>

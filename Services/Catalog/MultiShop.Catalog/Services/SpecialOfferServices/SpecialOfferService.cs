@@ -5,7 +5,7 @@ using MultiShop.Catalog.Dtos.SpecialOfferDtos;
 using MultiShop.Catalog.Entities;
 using MultiShop.Catalog.Settings;
 
-namespace MultiShop.Catalog.Services.SpecialOffferServices
+namespace MultiShop.Catalog.Services.SpecialOfferServices
 {
     public class SpecialOfferService : ISpecialOfferService
     {
@@ -30,7 +30,7 @@ namespace MultiShop.Catalog.Services.SpecialOffferServices
             await _specialOfferCollection.DeleteOneAsync(x => x.SpecialOfferId == id);
         }
 
-        public async Task<List<ResultSpecialOfferDto>> GetAllSpecialOfferyAsync()
+        public async Task<List<ResultSpecialOfferDto>> GetAllSpecialOfferAsync()
         {
             var values = await _specialOfferCollection.Find(x => true).ToListAsync();
             return _mapper.Map<List<ResultSpecialOfferDto>>(values);

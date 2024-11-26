@@ -1,12 +1,7 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-
-namespace MultiShop.Catalog.Entities
+﻿namespace MultiShop.DtoLayer.CatalogDtos.SpecialOfferDtos
 {
-    public class SpecialOffer
+    public class UpdateSpecialOfferDto
     {
-
-        [BsonId]
-        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string SpecialOfferId { get; set; }
         public string Title { get; set; }
         public string Subtitle { get; set; }
