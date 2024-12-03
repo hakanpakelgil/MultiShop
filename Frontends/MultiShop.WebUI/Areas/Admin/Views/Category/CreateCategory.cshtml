@@ -12,8 +12,11 @@
                 <h4>Kategori Oluştur</h4>
                 <br />
                 <div class="bs-example" data-example-id="simple-table">
-                    <form method="post">                                          <label>Kategori Adı</label>
+                    <form method="post">                                              <label>Kategori Adı</label>
                         <input type="text" class="form-control" asp-for="CategoryName" />
+                        <br />
+                        <label>Kategori Görseli</label>
+                        <input type="text" class="form-control" asp-for="ImageUrl" />
                         <br />
                         <button class="btn btn-primary">Kategori Oluştur</button>
                     </form>
