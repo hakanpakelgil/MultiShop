@@ -19,7 +19,7 @@
 
         @await Component.InvokeAsync("_ProductDetailImageSlideComponentPartial") 
 
-        @await Component.InvokeAsync("_ProductDetailFeatureComponentPartial")              
+        @await Component.InvokeAsync("_ProductDetailFeatureComponentPartial", new {id=ViewBag.x})              
     </div>
     <div class="row px-xl-5">
         <div class="col">
