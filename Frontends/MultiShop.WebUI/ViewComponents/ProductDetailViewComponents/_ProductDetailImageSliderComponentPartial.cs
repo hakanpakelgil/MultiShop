@@ -5,11 +5,11 @@ using Newtonsoft.Json;
 
 namespace MultiShop.WebUI.ViewComponents.ProductDetailViewComponents
 {
-    public class _ProductDetailImageSlideComponentPartial : ViewComponent
+    public class _ProductDetailImageSliderComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _ProductDetailImageSlideComponentPartial(IHttpClientFactory httpClientFactory)
+        public _ProductDetailImageSliderComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -21,6 +21,7 @@ namespace MultiShop.WebUI.ViewComponents.ProductDetailViewComponents
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                Console.WriteLine(jsonData);
                 var values = JsonConvert.DeserializeObject<GetByIdProductImageDto>(jsonData);
                 return View(values);
             }
