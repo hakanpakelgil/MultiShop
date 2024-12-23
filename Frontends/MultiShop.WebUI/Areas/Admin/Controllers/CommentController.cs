@@ -71,6 +71,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateComment(UpdateCommentDto updateCommentDto)
         {
+            updateCommentDto.Status = true;
             ViewBag.v1 = "Anasayfa";
             ViewBag.v2 = "Yorumlar";
             ViewBag.v3 = "Yorum Güncelleme";
