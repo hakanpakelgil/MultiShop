@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model CreateLoginDto
+
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -28,12 +30,12 @@
 				<h2>MultiShop Kullanıcı Giriş</h2>						
 				<div class="form-row">
 					<label for="your_username">Kullanıcı Adınız</label>
-					<input type="text"  id="your_username" class="input-text" required>
+					<input type="text"  id="your_username" asp-for="Username" class="input-text" required>
 				</div>
 				<div class="form-group">
 					<div class="form-row form-row-1 ">
 						<label for="password">Şifreniz</label>
-						<input type="password"  id="password" class="input-text" required>
+						<input type="password"  id="your_password" asp-for="Password" class="input-text" required>
 					</div>					
 				</div>				
 				<div class="form-row-last">
